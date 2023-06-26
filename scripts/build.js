@@ -27,9 +27,9 @@ plugins.forEach(plugin => {
 
 console.time('总耗时');
 // 过滤掉的目录
-const filterDirs = ['node_modules', 'dist', 'scripts', 'loaders', 'plugins'];
+const filterDirs = ['node_modules', 'dist', 'scripts', 'loaders', 'plugins', '.git', '.vscode'];
 // 过滤掉的文件
-const filterFiles = ['package.json', 'postcss.config.js', '.babelrc', 'webpack.config.js'];
+const filterFiles = ['package.json', 'postcss.config.js', '.babelrc', 'webpack.config.js', '.gitignore', 'README.md', 'package-lock.json'];
 // 过滤掉的目录和文件
 const filterDirsAndFiles = [...filterDirs, ...filterFiles];
 // 不处理转译的文件
