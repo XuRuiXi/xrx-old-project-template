@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server config webpack.config.js",
-    "build": "node scripts/build.js"
+    "start": "cross-env NODE_ENV=start webpack-dev-server config webpack.config.js",
+    "build": "cross-env NODE_ENV=build node scripts/build.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "babel-preset-env": "^1.7.0",
     "cheerio": "1.0.0-rc.12",
     "child_process": "^1.0.2",
+    "cross-env": "^7.0.3",
     "images": "^3.2.4",
     "postcss": ">=8.4.6 <9.0.0",
     "postcss-cli": "^10.1.0",

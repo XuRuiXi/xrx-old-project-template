@@ -1,6 +1,9 @@
 const Done = require('./plugins/done')
 const Start = require('./plugins/start')
-module.exports = {
+// 获取环境变量
+const env = process.env.NODE_ENV;
+
+const devConfig = {
   devServer: {
     hot: true,
     open: true,
@@ -13,6 +16,9 @@ module.exports = {
       },
     }
   },
+}
+
+const buildConfig = {
   loaders: [
     // {
     //   test: /\.(png|jpg)$/,
@@ -27,3 +33,5 @@ module.exports = {
   ],
   plugins: [new Done(), new Start()]
 }
+
+module.exports = env === 'start' ? devConfig : buildConfig;
