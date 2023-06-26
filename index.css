@@ -1,0 +1,9 @@
+.color{
+    color:#12345678;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: aqua;
+    font-size: 700;
+    user-select: none;
+}
