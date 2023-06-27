@@ -44,8 +44,10 @@
   <script>
     let a = [1, 2];
     const b = [...a];
-    fetch('/portal/MCM-WEB-SERVER/MCM-COMMON-SERVICE-SERVER/callRemoteFunction/getSession').then(res => res.text()).then(res => {
-      document.body.innerHTML = res
+    fetch('/portal/MCM-WEB-SERVER/MCM-COMMON-SERVICE-SERVER/callRemoteFunction/getSession', {
+      method: 'POST',
+    }).then(res => res.json()).then(res => {
+      console.log(res);
     })
   </script>
   <script>

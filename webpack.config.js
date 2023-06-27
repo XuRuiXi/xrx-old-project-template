@@ -13,6 +13,10 @@ const devConfig = {
         target: 'http://10.10.192.44:12022',
         pathRewrite: { '^/api': '' },
         changeOrigin: true,
+        headers:{
+          //改写Origin,注意结尾不含 /   
+          Origin:"http://10.10.192.44:12022",
+        },
       },
     }
   },
